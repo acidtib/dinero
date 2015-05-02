@@ -62,9 +62,27 @@ class User < ActiveRecord::Base
         user.oauth_token = auth.credentials.token
         user.oauth_expires_at = Time.at(auth.credentials.expires_at) 
       end
+
+      @graph = Koala::Facebook::API.new(auth.credentials.token)
+      @friends = @graph.get_connections("me", "taggable_friends", {:limit => 100})
+      get_friends(@friends, return_user.id)
     end
 
     return_user
+  end
+
+  def self.get_friends(payload, id)
+    begin
+      payload.each do |friend|
+        create_contact = Contact.create(
+          user_id: id,
+          name: friend['name']
+        )
+      end
+      get_friends(payload.next_page, id)
+    rescue Exception => e
+  
+    end
   end
 
   def self.new_with_session(params, session)
