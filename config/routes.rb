@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users, controllers: { registrations: 'users/registrations', passwords: 'users/passwords' }
 
   get 'dashboard' => 'dashboard#door'
   scope 'dashboard' do
