@@ -46,11 +46,18 @@ class User < ActiveRecord::Base
       return_user.oauth_token = auth.credentials.token
       return_user.oauth_expires_at = Time.at(auth.credentials.expires_at) 
     else
+
+      if auth.info.email.blank?
+        email = "#{auth.uid}@#{auth.provider}.com"
+      else
+        email = auth.info.email
+      end
+
       return_user = self.create do |user|
         user.provider = auth.provider
         user.uid = auth.uid
         user.name = auth.info.name
-        user.email = auth.info.email
+        user.email = email
         user.password = Devise.friendly_token[0,20]
         user.oauth_token = auth.credentials.token
         user.oauth_expires_at = Time.at(auth.credentials.expires_at) 
