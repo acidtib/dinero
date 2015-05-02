@@ -10,6 +10,10 @@ class RemittanceController < ApplicationController
     )
   end
 
+  def funding
+    @transaction = Transaction.find(params['transaction'])
+  end
+
   private
     def set_user
       @user = User.find(current_user.id)
