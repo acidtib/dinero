@@ -17,6 +17,10 @@
 #  updated_at             :datetime
 #  name                   :string
 #  phone                  :string
+#  oauth_token            :text
+#  oauth_expires_at       :string
+#  provider               :string
+#  uid                    :string
 #
 # Indexes
 #

@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users, controllers: { registrations: 'users/registrations', passwords: 'users/passwords' }
+  devise_for :users, controllers: { registrations: 'users/registrations', passwords: 'users/passwords', :omniauth_callbacks => 'users/omniauth_callbacks' }
 
   get 'dashboard' => 'dashboard#door'
   scope 'dashboard' do
