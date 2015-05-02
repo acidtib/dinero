@@ -9,6 +9,10 @@ class DashboardController < ApplicationController
   def settings
   end
 
+  def choose_value
+    
+  end
+
   private
     def set_user
       @user = User.find(current_user.id)
