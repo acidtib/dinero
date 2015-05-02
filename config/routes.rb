@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     resources :contacts
 
     get 'choose_value' => 'dashboard#choose_value'
+    get 'remittance/quote' => 'remittance#quote'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
