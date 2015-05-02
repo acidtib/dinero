@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
     else
 
       if auth.info.email.blank?
-        email = "#{auth.uid}@#{auth.provider}.com"
+        email = "#{SecureRandom.hex}-#{auth.uid}@#{auth.provider}.com"
       else
         email = auth.info.email
       end
