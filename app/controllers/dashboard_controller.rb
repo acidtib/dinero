@@ -10,7 +10,10 @@ class DashboardController < ApplicationController
   end
 
   def choose_value
-    
+    @create_transaction = Transaction.create(
+      user_id: current_user.id,
+      contact_id: params['contact']
+    )
   end
 
   private

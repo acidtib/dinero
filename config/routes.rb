@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
     get 'choose_value' => 'dashboard#choose_value'
     get 'remittance/quote' => 'remittance#quote'
+    get 'remittance/funding' => 'remittance#funding'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
