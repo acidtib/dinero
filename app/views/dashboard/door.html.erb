@@ -3,5 +3,5 @@
 
 <h1>Contacts</h1>
 <% @contacts.each do |contact| %>
-  <%= contact.name %>
+  <%= link_to contact.name, choose_value_path(contact: contact.id) %>
 <% end %>

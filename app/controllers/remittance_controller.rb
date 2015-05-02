@@ -3,7 +3,11 @@ class RemittanceController < ApplicationController
   before_action :set_user, only: [:door, :settings]
 
   def quote
-    
+    @transaction = Transaction.find(params['transaction'])
+
+    @transaction.update(
+      transaction_type: "money"
+    )
   end
 
   private
