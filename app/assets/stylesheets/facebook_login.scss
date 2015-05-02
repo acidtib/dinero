@@ -1,0 +1,23 @@
+.facebook_login{
+  background: #4c69ba;
+  background: -webkit-gradient(linear, center top, center bottom, from(#4c69ba), to(#3b55a0));
+  background: -webkit-linear-gradient(#4c69ba, #3b55a0);
+  border-color: #4c69ba;
+  -webkit-border-radius: 2px;
+  color: #fff;
+  font-family: "Helvetica neue";
+  -webkit-font-smoothing: antialiased;
+  text-shadow: 0 -1px 0 #354c8c;
+}
+
+.facebook_login div {
+  display:inline-block;
+}
+
+.facebook_login a{
+  font-size: 24px;
+  color:white;
+  font-weight:bold;
+  display: block;
+}
+
