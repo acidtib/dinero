@@ -1,39 +1,43 @@
-<div class="row">
-  <h1>Remesa</h1>
+<div class="main-logo row">
+  <div class="row">
+    <div class="medium-6 medium-centered columns">
+
+      <%= image_tag('logo.png',class:"logo middle-center column" ) %>
+    </div>
+  </div>
+
 </div>
 <div class="row">
-  <h4 class="main-message">Send Money Instantly like if it was the future</h4>
+  <div class="main-message-container medium-centered medium-7 column">
+    <h3 class="main-message">Send Money Internationaly Instantly</h3>
+  </div>
+
 </div>
-<div class="row">
-  <div class="">
-    <table class="facebook_login">
-      <tbody>
-      <tr>
-        <td>
-          <img class="_4z_e img" src="https://fbstatic-a.akamaihd.net/rsrc.php/v2/y6/r/yeKliSMc_m4.png"
-          alt="" width="31" height="31">
-        </td>
-        <td>
-          <a href="#">Login</a>
-        </td>
-      </tr>
-      </tbody>
-    </table>
+
+</div>
+<div class="row login-homepage">
+<div class="medium-5 medium-centered columns">
+  <%#<div class="medium-3  column">%>
+    <%= link_to("Login" , new_user_session_path, class:"button login" ) %>
+  <%#</div>%>
+  <%#<div class="medium- column">%>
+    <div class="facebook_login button">
+      <%= image_tag('facebook_logo.png') %>
+      <a href="#">Login Facebook</a>
+    <%#</div>%>
   </div>
-  <div class="regular_login">
-  <% form_for  %>
-  </div>
+</div>
 </div>
 <div class="row">
   <h5>Your squad can recieve money in</h5>
   <div class="methods_sending_money_to panel ">
-    <h5>Mexican Pesos</h5>
+    <h5>Local Currency</h5>
   </div>
   <div class="methods_sending_money_to panel ">
     <h5>Gift Cards</h5>
   </div>
   <div class="methods_sending_money_to panel ">
-    <h5>Cocaine</h5>
+    <h5>Telephone Minutes</h5>
   </div>
 </div>
 

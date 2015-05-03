@@ -8,6 +8,11 @@
   font-family: "Helvetica neue";
   -webkit-font-smoothing: antialiased;
   text-shadow: 0 -1px 0 #354c8c;
+  padding:0.5rem;
+  img{
+    height:50px;
+    width:50px;
+  }
 }
 
 .facebook_login div {
@@ -15,9 +20,9 @@
 }
 
 .facebook_login a{
-  font-size: 24px;
+  font-size: 20px;
   color:white;
   font-weight:bold;
-  display: block;
+  display:inline-block;
 }
 

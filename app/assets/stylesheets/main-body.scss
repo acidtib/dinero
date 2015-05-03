@@ -2,7 +2,22 @@
 display:inline-block;
 }
 
-.logo{
-  
+.main-logo{
+  margin-top: 5%;
+  margin-bottom: 2%;
 }
 
+.login{
+    font-size: 20px;
+    font-family: "Helvetica neue";
+    font-weight:bold;
+    padding-bottom: 1.5rem;
+
+}
+.main-message-container{
+
+  .main-message{
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+}
