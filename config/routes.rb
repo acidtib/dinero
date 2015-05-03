@@ -4,8 +4,12 @@ Rails.application.routes.draw do
 
   get 'dashboard' => 'dashboard#door'
   scope 'dashboard' do
-    get 'settings' => 'dashboard#settings'    
+    get 'settings' => 'dashboard#settings'
     resources :contacts
+
+    get 'choose_value' => 'dashboard#choose_value'
+    get 'remittance/quote' => 'remittance#quote'
+    get 'remittance/funding' => 'remittance#funding'
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
